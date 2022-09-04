@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 DATABASE_URL = os.environ.get("postgres://tqaacpeqijpqza:e8912056731384cd45da2493658f4167c42c25401bf4ec12ee034ae7928c4357@ec2-107-23-76-12.compute-1.amazonaws.com:5432/d51l301i0s5efi")
 
 def start() -> scoped_session:
-    engine = create_engine(DATABASE_URL)
+    engine = create_engine(postgres://tqaacpeqijpqza:e8912056731384cd45da2493658f4167c42c25401bf4ec12ee034ae7928c4357@ec2-107-23-76-12.compute-1.amazonaws.com:5432/d51l301i0s5efi)
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
