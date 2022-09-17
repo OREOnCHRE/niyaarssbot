@@ -40,7 +40,7 @@ def create_feed_checker(feed_url):
         FEED = feedparser.parse(feed_url)
         entry = FEED.entries[0]
         if entry.id != db.get_link(feed_url).link:
-            if "CHRE" in entry.title:
+            if "Yugen" in entry.title:
                 title = entry.title
                 view_link = entry.id
                 tr_dl_link = entry.link
